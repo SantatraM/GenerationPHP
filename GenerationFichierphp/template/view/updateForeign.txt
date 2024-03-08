@@ -1,0 +1,6 @@
+    <?php foreach($liste[nomTable] as $[nomTable]s) { ?>
+
+        <option name="[Name]" value="<?php echo $[nomTable]s->id[nomTable]; ?>">
+            <?php echo $[nomTable]s->nom[nomTable]; ?>
+        </option>
+    <?php } ?>

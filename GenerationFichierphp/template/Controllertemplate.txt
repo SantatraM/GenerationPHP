@@ -1,0 +1,37 @@
+<?php 
+    defined ('BASEPATH') OR exit ('No direct script access allowed');
+    class [nomTable]Controller extends CI_Controller {
+
+        public function insert[nomTable](){
+            [inputValue]
+            $value = [values];
+            $this->Generalisation->insertion("[nomTable][colonne]",$value);
+            redirect("[nomTable]Controller/affichage[nomTable]");
+        }
+
+        public function affichage[nomTable]() {
+            $data['liste[nomTable]'] = $this->Generalisation->avoirTableConditionnee("[nomTable]");
+            $this->load->view('Liste[nomTable]',$data);
+        }
+
+        public function delete[nomTable]() {
+            $id = $this->input->get("id[nomTable]");
+            $this->Generalisation->delete("[nomTable]","id[nomTable]='".$id."'");
+            redirect('[nomTable]Controller/affichage[nomTable]');
+        }
+
+        public function FormulaireUpdate[nomTable]() {
+            $id = $this->input->get("id[nomTable]");
+            $data['[nomTable]']=$this->Generalisation->avoirTableSpecifique("[nomTable]","*","id[nomTable]='".$id."'");
+            [Foreign]
+            $this->load->view('update[nomTable]',$data);
+        }
+
+        public function update[nomTable](){
+            [nouveau]
+            $nouveu = [nouveauValeur];
+            $this->Generalisation->miseAJour("[nomTable]", $nouveau, $id[nomTable]);
+            redirect('[nomTable]Controller/affichage[nomTable]');
+        }
+
+}

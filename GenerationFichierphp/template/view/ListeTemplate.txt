@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+    <tr>
+        [enTete]
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <?php foreach($liste[nomTable] as $[nomTable]s) { ?>
+            [Liste]
+            <td>
+                <a href="<?php echo site_url("[nomTable]Controlleur/FormulaireUpdate[nomTable]?id[nomTable]=").[valeur]; ?>">Modifier</a>
+            </td>
+            <td>
+                <a href="<?php echo site_url("[nomTable]Controlleur/delete[nomTable]?id[nomTable]=").[valeur]; ?>">Supprimer</a>
+            </td>
+        <?php } ?>
+    </tr>
+</table>
+</body>
+</html>
