@@ -8,7 +8,7 @@ public class Connexion {
         Connection conne=null;
         try {
             Class.forName("org.postgresql.Driver");
-             conne=DriverManager.getConnection("jdbc:postgresql://localhost:5432/test","postgres","postgres");     
+             conne=DriverManager.getConnection("jdbc:postgresql://localhost:5432/testgeneration","postgres","postgres");     
         }    
         catch (Exception e) {
             e.printStackTrace();

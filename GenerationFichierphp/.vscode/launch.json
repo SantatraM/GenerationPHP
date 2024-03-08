@@ -9,6 +9,20 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "main.Main",
+            "projectName": "GenerationFichierphp_c63a13be"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "main.Main",
+            "projectName": "GenerationFichierphp_9f268"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "main.Main",
             "projectName": "GenerationFichierphp_6e7d15c8"
         },
         {

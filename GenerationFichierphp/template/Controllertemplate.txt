@@ -5,18 +5,19 @@
         public function insert[nomTable](){
             [inputValue]
             $value = [values];
-            $this->Generalisation->insertion("[nomTable][colonne]",$value);
+            $this->Generalisation->insertion("[colonne]",$value);
             redirect("[nomTable]Controller/affichage[nomTable]");
         }
 
         public function affichage[nomTable]() {
-            $data['liste[nomTable]'] = $this->Generalisation->avoirTableConditionnee("[nomTable]");
+            $data['liste[nomTable]'] = $this->Generalisation->avoirTableConditionnee("[nomTable]","*","etat=1");
             $this->load->view('Liste[nomTable]',$data);
         }
 
         public function delete[nomTable]() {
             $id = $this->input->get("id[nomTable]");
-            $this->Generalisation->delete("[nomTable]","id[nomTable]='".$id."'");
+            $this->Generalisation->update("[nomTable]","id[nomTable]='".$id."'");
+            $this->Generalisation->miseAJour("[nomTable]", $nouveau, $id[nomTable])
             redirect('[nomTable]Controller/affichage[nomTable]');
         }
 
@@ -28,9 +29,10 @@
         }
 
         public function update[nomTable](){
+            $id = $this->input->post("id");
             [nouveau]
-            $nouveu = [nouveauValeur];
-            $this->Generalisation->miseAJour("[nomTable]", $nouveau, $id[nomTable]);
+            $nouveau = [nouveauValeur];
+            $this->Generalisation->miseAJour("[nomTable]", $nouveau, "id[nomTable]='".$id."'");
             redirect('[nomTable]Controller/affichage[nomTable]');
         }
 
